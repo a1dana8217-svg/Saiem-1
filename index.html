@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Colourful School Feature Boxes</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Noto Sans Bengali", sans-serif;
+    background: #f2f7ff;
+    padding: 5px;
+}
+
+.feature-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 5px;
+}
+
+/* Colourful 3D Cards */
+.feature-box {
+    min-width: 0;
+    text-align: center;
+    padding: 10px 2px;
+    border-radius: 9px;
+    background: linear-gradient(145deg, #ffffff, #e4edff);
+    border: 1px solid rgba(255,255,255,0.9);
+
+    box-shadow:
+        3px 3px 6px #c5d0e2,
+        -3px -3px 6px #ffffff,
+        inset 1px 1px 2px #ffffff;
+
+    transition: 0.3s ease;
+}
+
+.feature-box:hover {
+    transform: translateY(-4px);
+    box-shadow:
+        5px 6px 10px #bccbe0,
+        -3px -3px 6px #ffffff;
+}
+
+/* Colourful Round Icons */
+.feature-icon {
+    width: 34px;
+    height: 34px;
+    margin: 0 auto 6px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 18px;
+
+    box-shadow:
+        2px 3px 5px rgba(0,0,0,0.18),
+        inset 1px 1px 3px rgba(255,255,255,0.5);
+}
+
+.blue {
+    background: linear-gradient(135deg, #38d5ff, #0756e8);
+}
+
+.green {
+    background: linear-gradient(135deg, #71f5a1, #009847);
+}
+
+.orange {
+    background: linear-gradient(135deg, #ffe477, #ff7000);
+}
+
+.purple {
+    background: linear-gradient(135deg, #e3a1ff, #8338ec);
+}
+
+.pink {
+    background: linear-gradient(135deg, #ffafbd, #ff1744);
+}
+
+.teal {
+    background: linear-gradient(135deg, #56ead5, #008b9a);
+}
+
+/* Text */
+.feature-box h3 {
+    color: #153b78;
+    font-size: clamp(7px, 1.05vw, 13px);
+    line-height: 1.5;
+    margin-bottom: 3px;
+    overflow-wrap: anywhere;
+}
+
+.feature-box p {
+    color: #60738f;
+    font-size: clamp(6px, 0.8vw, 10px);
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+/* Mobile: Keep All 6 in One Row */
+@media (max-width: 550px) {
+    body {
+        padding: 3px;
+    }
+
+    .feature-container {
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+        gap: 3px;
+    }
+
+    .feature-box {
+        padding: 7px 1px;
+        border-radius: 6px;
+    }
+
+    .feature-icon {
+        width: 25px;
+        height: 25px;
+        font-size: 13px;
+        margin-bottom: 4px;
+    }
+
+    .feature-box h3 {
+        font-size: 8px;
+        line-height: 1.4;
+    }
+
+    .feature-box p {
+        font-size: 7px;
+        line-height: 1.3;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="feature-container">
+
+    <div class="feature-box">
+        <div class="feature-icon blue">🎓</div>
+        <h3>মানসম্মত শিক্ষা</h3>
+        <p>আধুনিক শিক্ষা</p>
+    </div>
+
+    <div class="feature-box">
+        <div class="feature-icon green">📚</div>
+        <h3>অভিজ্ঞ শিক্ষক</h3>
+        <p>দক্ষ শিক্ষক</p>
+    </div>
+
+    <div class="feature-box">
+        <div class="feature-icon orange">🏫</div>
+        <h3>নিরাপদ পরিবেশ</h3>
+        <p>সুন্দর পরিবেশ</p>
+    </div>
+
+    <div class="feature-box">
+        <div class="feature-icon purple">⭐</div>
+        <h3>সৃজনশীল শিক্ষা</h3>
+        <p>প্রতিভার বিকাশ</p>
+    </div>
+
+    <div class="feature-box">
+        <div class="feature-icon pink">♥</div>
+        <h3>শিশুর যত্ন</h3>
+        <p>বিশেষ পরিচর্যা</p>
+    </div>
+
+    <div class="feature-box">
+        <div class="feature-icon teal">📈</div>
+        <h3>উজ্জ্বল ভবিষ্যৎ</h3>
+        <p>সাফল্যের পথে</p>
+    </div>
+
+</div>
+
+</body>
+</html>
